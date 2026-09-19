@@ -39,6 +39,30 @@ import java.util.*;
           System.out.println();
     
     
-    
   }
+ }
+
+
+
+//fibonacci series
+import java.util.*;
+ 
+ class Main{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Enter n value:");
+    int n =sc.nextInt();
+    int a=0,b=1;
+        int next;
+
+    for(int i=1;i<=n;i++){
+      System.out.print(a+" ");
+
+       next=a+b;
+          a=b;
+        b=next;
+    }
+     
+}
  }
