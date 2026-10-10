@@ -19,6 +19,7 @@ System.out.println("Sum is: " + Sum);
 //print average of three numbers
 
 import java.util.*;
+class Main{
 public static int Average(int a, int b, int c){
   int Average=(a + b + c) / 3;
   return Average;
@@ -33,7 +34,7 @@ public static void main(String[] args){
   System.out.println("Average is :"+ Average);
 
   }
-
+}
 
 //sum of odd numbers
 
@@ -63,5 +64,23 @@ class Main {
 
         System.out.println("Sum of odd nums: " + result);
 
+    }
+}
+
+// factorial of n numbers
+import java.util.*;
+class Main {
+public static int fact(int n){
+    int fact=1;
+    for(int i=1;i<=n;i++){
+      fact=fact*i;
+}
+        return fact;
+     }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter n value:");
+        int n=sc.nextInt();
+    System.out.println("Factorial is:" + fact(n));
     }
 }
