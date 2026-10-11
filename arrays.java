@@ -33,22 +33,46 @@ class EvenOdd {
 
 //Sum of arrays
 
-class ArraySum {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+import java.util.*;
+class Main{
+  public static void main(String[] args){
+    int sum=0;
+    int[] a={1,2,3,4,5,6,7};
+    for(int i=0;i<a.length;i++)
+      sum=sum+a[i];
+    System.out.println(sum);
+  }
 
-        System.out.print("Enter size: ");
-        int n = sc.nextInt();
+}
 
-        int[] arr = new int[n];
+// reverse array
+import java.util.*;
+class Main{
+  public static void main(String[] args){
+    int[] a={7,5,4,3,2,8};
+    for(int i=a.length-1; i>=0;i--){
+      
+    System.out.println(a[i]);
+    }
+}
+}
+
+//find the missing number in array
+import java.util.*;
+class Main{
+  public static void main(String[] args){
+    int[] a={1,5,4,3,2,7};
+         int n = 7;
+
+        int total = n * (n + 1) / 2;
         int sum = 0;
 
-        System.out.println("Enter elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-            sum = sum + arr[i];
+        for (int i = 0; i < a.length; i++) {
+            sum = sum + a[i];
         }
 
-        System.out.println("Sum = " + sum);
+        int missing = total - sum;
+
+        System.out.println("Missing number: " + missing);
     }
 }
