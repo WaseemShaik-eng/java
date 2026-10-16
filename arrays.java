@@ -104,4 +104,29 @@ import java.util.*;
  }
         }
       }
-  
+
+
+
+public class SecondLargest {
+    public static void main(String[] args) {
+        int[] arr = {10, 25, 8, 40, 30, 40};
+
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for (int n : arr) {
+            if (n > largest) {
+                second = largest;
+                largest = n;
+            } else if (n > second && n < largest) {
+                second = n;
+            }
+        }
+
+        if (second == Integer.MIN_VALUE) {
+            System.out.println("No second largest distinct element");
+        } else {
+            System.out.println("Second largest: " + second);
+        }
+    }
+}
