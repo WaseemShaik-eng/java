@@ -130,3 +130,23 @@ public class SecondLargest {
         }
     }
 }
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Duplicates {
+    public static void main(String[] args) {
+        int[] arr = {2, 5, 3, 2, 7, 5, 8};
+
+        Set<Integer> seen = new HashSet<>();
+        Set<Integer> duplicates = new HashSet<>();
+
+        for (int n : arr) {
+            if (!seen.add(n)) {
+                duplicates.add(n);
+            }
+        }
+
+        System.out.println("Duplicates: " + duplicates);
+    }
+}
